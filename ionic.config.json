@@ -1,0 +1,8 @@
+{
+  "name": "Location_Watch",
+  "app_id": "80a58f16",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

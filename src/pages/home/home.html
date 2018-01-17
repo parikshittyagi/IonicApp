@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Location Trace</ion-title>
+    <h1>Enter UUID</h1>
+    <input type="text" placeholder="UUID of the Vehicle" [(ngModel)]="UUID"><br>
+    <button (click)="getDeviceByUUID()">Fetch Location</button>
+    <ion-card>
+    <ion-card-header>
+      Current Location
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon name="leaf" item-start></ion-icon><br>
+      Latitude: {{Vehicles.metadata.latitude}}<br>
+      Longitude: {{Vehicles.metadata.longitude}}<br>
+      City: {{Vehicles.metadata.city}}<br>
+    </ion-card-content>
+  </ion-card>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+</ion-content>
