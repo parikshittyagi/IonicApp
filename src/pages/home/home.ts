@@ -12,6 +12,7 @@ export class HomePage {
   UUID:String;
   showLocation="";
   currentCity="Mumbai";
+  //initializing the values to default location
   Vehicles={"metadata":{
     "latitude":"0",
     "longitude":"0",
@@ -19,6 +20,7 @@ export class HomePage {
   }}
   constructor(private httpServiceProviders: HttpServiceProvider, public alertCtrl: AlertController) {}
 
+  //calling the service of http get declared in providers
   getDeviceByUUID(){
       this.httpServiceProviders.getDeviceByID(this.UUID).subscribe(data=>{
       if (data.success){
@@ -29,6 +31,7 @@ export class HomePage {
     })
   }
   
+  //TO check wheather the location is changed or not
   CompareCity(){
     if (this.currentCity != this.Vehicles.metadata.city){
       this.showPromt()
@@ -36,6 +39,7 @@ export class HomePage {
     }
   }
 
+  //To create alerts if the city is changed
   showPromt(){
     let alert = this.alertCtrl.create({
       title:'City Alert',
